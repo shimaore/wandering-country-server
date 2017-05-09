@@ -1,0 +1,31 @@
+{
+  "name": "wandering-country-server",
+  "version": "1.0.0",
+  "description": "Server-side of wandering-country",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepublish": "coffee -c *.coffee.md",
+    "pretest": "npm install && npm install --only=dev && npm run prepublish",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/shimaore/wandering-country-server"
+  },
+  "author": "Stéphane Alnet <stephane@shimaore.net> (https://stephane.shimaore.net/)",
+  "license": "Unlicense",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-coverage": "^2.0.1",
+    "coffee-script": "^1.12.5",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "shimaore-pouchdb": "6.1.1",
+    "pouchdb": "6.1.1",
+    "seem": "^2.0.0"
+  }
+}
